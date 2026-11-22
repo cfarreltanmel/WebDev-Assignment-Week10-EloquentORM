@@ -2,11 +2,9 @@
 @section('content')
     <main class="grow flex items-center justify-center py-16 px-6 bg-slate-50/50">
         <div class="w-full max-w-xl mx-auto">
-
-            <h1 class="text-4xl md:text-5xl font-light text-slate-900 text-center mb-10 tracking-tight">
-                Send a Message
+            <h1 class="text-4xl md:text-5xl font-light text-slate-900 text-center mb-12 tracking-tight">
+                {{ $contacts->first()->pageTitle }}
             </h1>
-
             <div class="bg-white rounded-2xl p-8 md:p-10 shadow-sm border border-slate-100">
                 <form action="contact" method="POST" class="space-y-6">
                     @csrf

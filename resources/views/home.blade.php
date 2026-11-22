@@ -13,7 +13,7 @@
             </h1>
 
             <p class="text-lg md:text-xl text-slate-200 font-normal max-w-2xl mb-8 leading-relaxed">
-                Seorang mahasiswa IMT di Universitas Ciputra Makassar
+                {{ $homes->first()->description }}
             </p>
 
             <a href="about"

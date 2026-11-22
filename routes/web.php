@@ -1,25 +1,32 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
 
 Route::get('/', function () {
-    $Nama = "Christian Farrel Tanmel";
+    $Nama = 'Christian Farrel Tanmel';
+    $homes = DB::table('homes')->get();
     return view('home', [
-        "Nama" => $Nama,
+        'Nama' => $Nama,
+        'homes' => $homes,
     ]);
 });
 
 Route::get('/about', function () {
-    $Nama = "Christian Farrel Tanmel";
+    $Nama = 'Christian Farrel Tanmel';
+    $abouts = DB::table('abouts')->get();
     return view('about', [
-        "Nama" => $Nama,
+        'Nama' => $Nama,
+        'abouts' => $abouts,
     ]);
 });
 
 Route::get('/contact', function () {
-    $Nama = "Christian Farrel Tanmel";
+    $Nama = 'Christian Farrel Tanmel';
+    $contacts = DB::table('contacts')->get();
     return view('contact', [
-        "Nama" => $Nama,
+        'contacts' => $contacts,
+        'Nama' => $Nama,
     ]);
 });
 
@@ -38,15 +45,19 @@ Route::post('/contact', function () {
 });
 
 Route::get('/blog', function () {
-    $Nama = "Christian Farrel Tanmel";
+    $Nama = 'Christian Farrel Tanmel';
+    $blogs = DB::table('blogs')->get();
     return view('blog', [
-        "Nama" => $Nama,
+        'blogs' => $blogs,
+        'Nama' => $Nama,
     ]);
 });
 
 Route::get('/project', function () {
-    $Nama = "Max Verstappen";
+    $Nama = 'Christian Farrel Tanmel';
+    $projects = DB::table('projects')->get();
     return view('project', [
-        "Nama" => $Nama,
+        'projects' => $projects,
+        'Nama' => $Nama,
     ]);
 });

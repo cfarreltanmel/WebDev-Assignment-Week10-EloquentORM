@@ -15,9 +15,11 @@
                             <img src="{{ asset('img/Outfix.png') }}" alt="Outfix" class="w-full h-full object-cover" />
                         </div>
                         <div class="p-6">
-                            <h2 class="text-xl font-bold text-slate-900 mb-2">Outfix</h2>
+                            <h2 class="text-xl font-bold text-slate-900 mb-2">
+                                {{ $projects->firstWhere('id', 3)?->projectTitle }}
+                            </h2>
                             <p class="text-slate-600 text-sm leading-relaxed mb-4">
-                                Project ALP semester 2 gabungan 2 mata kuliah.
+                                {{ $projects->firstWhere('id', 3)?->projectDescription }}
                             </p>
 
                             <div class="flex flex-wrap gap-2 mb-6">

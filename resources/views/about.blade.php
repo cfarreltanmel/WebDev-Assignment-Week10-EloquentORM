@@ -35,12 +35,12 @@
                         <ul class="space-y-3 text-sm md:text-base text-slate-700">
                             <li class="pb-3 border-b border-slate-100 last:border-b-0 last:pb-0">
                                 <span class="font-bold text-slate-900">Universitas Ciputra</span>
-                                <span class="text-slate-600">- Information &amp; Multimedia Technology (2025 -
-                                    Sekarang)</span>
+                                <span class="text-slate-600">- {{ $abouts->first()->academicBackground }}</span>
                             </li>
                             <li class="pb-3 border-b border-slate-100 last:border-b-0 last:pb-0">
                                 <span class="font-bold text-slate-900">SMA Katolik Rajawali</span>
-                                <span class="text-slate-600">- Jurusan IPA (2022 - 2025)</span>
+                                <span class="text-slate-600">-
+                                    {{ $abouts->firstWhere('id', 2)?->academicBackground }}</span>
                             </li>
                         </ul>
                     </div>
